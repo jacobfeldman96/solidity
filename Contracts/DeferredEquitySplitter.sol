@@ -41,6 +41,11 @@ contract DeferredEquityPlan {
         active = false;
     }
 
+    function fastforward() public {
+        uint fakenow;
+        fakenow += 100 days;
+    }
+
     // Since we do not need to handle Ether in this contract, revert any Ether sent to the contract directly
     function() external payable {
         revert("Do not send Ether to this contract!");
